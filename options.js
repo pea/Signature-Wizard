@@ -8,6 +8,10 @@ var app = {
         $('.add-set').on('click', function(){
             app.addSet(); 
         });
+        $('.sets').on('click', function(el){
+            $('.sets input').removeClass('highlighted');
+            $($(el.target).parents('.set')[0]).find('input').addClass('highlighted');
+        });
     },    
     loadValues: function(){
         chrome.storage.sync.get(null, function (obj) {
@@ -65,7 +69,7 @@ var app = {
         * Email and URL input fields
         */
         set: function(email, url){
-            return '<div class="set"><input type="email" value="' + email + '" placeholder="Email" class="email"><input type="url" value="' + url + '" placeholder="URL of Signature" class="url"></div>';
+            return '<div class="set"><input type="email" value="' + email + '" placeholder="Email address" class="email"><input type="url" value="' + url + '" placeholder="Url of signature (https:// only)" class="url"></div>';
         }
     }
 };

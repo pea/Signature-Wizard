@@ -1,4 +1,5 @@
 $(document).ready(function () {   
+    
     /*
     * User clicks on message window
     * If it has an ID (if it is a dialogue) initiate addSignture
@@ -12,10 +13,12 @@ $(document).ready(function () {
     });
 });
 function addSignature(dialogue_id) {   
+
     // Get the email selected by the user
     var id = dialogue_id.replace( /(:|\.|\[|\]|,)/g, "\\$1" );
     var string = $('#' + id + ' div[role="button"][tabindex="1"] span').text();
     var email = string.substring(string.lastIndexOf("<") + 1, string.lastIndexOf(">"));
+
     // Get the signature URL which matches the selected email
     chrome.storage.sync.get(null, function (obj) {
         var url = null;
@@ -26,19 +29,24 @@ function addSignature(dialogue_id) {
                 url = v.url;
             }
         });     
-        if(url === null) {    
+        if(url === null) {   
+
             // If no signature URL set remove any existing one
             $('#' + id + ' ' + messageBody + ' *[align="gm-signature"]').remove();
             $('#' + id + ' ' + messageBody + ' *[align="gm-signature-br"]').remove();
+
         } else {           
+
             // Create signature container if one doesn't currently exist
             if($('#' + id + ' ' + messageBody + ' *[align="gm-signature"]').length === 0) {
                 $('#' + id + ' ' + messageBody).append('<br align="gm-signature-br"><br align="gm-signature-br"><div align="gm-signature" contenteditable="false"/>');
             }         
+
             // If the user has selected a different email mark it as unset, in need of updating
             if(window.gmLastUrl != url){
                 $('#' + id + ' ' + messageBody + ' *[align="gm-signature"]').removeAttr('width');
             }       
+
             // If signature container marked as not set add 'loading' styles and fetch signature from URL
             if($('#' + id + ' ' + messageBody + ' *[align="gm-signature"][width="gm-set"]').length === 0){
                 $('#' + id + ' ' + messageBody + ' *[align="gm-signature"]').attr('height', 'gm-loading').load(url, function(){
@@ -46,6 +54,7 @@ function addSignature(dialogue_id) {
                 });
                 window.gmLastUrl = url;
             }
+
         }
     });
 }
