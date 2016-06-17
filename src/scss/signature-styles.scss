@@ -1,0 +1,16 @@
+*[height='gm-loading'] {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    color: #CCCCCC;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+}
+
+*[height='gm-loading'] * {
+    display: none;
+}
+
+*[height='gm-loading']:before {
+    content: 'Loading Signature';
+}

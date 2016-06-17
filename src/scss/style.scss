@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto,RobotoDraft,'Helvetica Neue',arial,sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 30px 10px 10px 10px;
+    color: #111111;
+    background-color: rgba(245,245,245,.4);
+}
+a {
+    font-weight: 400;
+    color: #3C80F6;
+}
+body,
+input {
+    font-size: 1em;
+}
+.wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+header {
+    font-size: 22px;
+    font-weight: 200;
+    margin: 0 0 30px 0;
+    padding: 0 0 7px 0;
+    letter-spacing: .03em;
+    .title {
+        img {
+            display: block;
+            width: 200px;
+            margin: 0 auto 30px auto;
+            left: 2px;
+            position: relative;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1em;
+            margin: 11px 0 0 0;
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1em;
+            text-align: center;
+        }
+    }
+}
+p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4em;
+    margin: 0 0 25px 0;
+    text-align: center;
+    a {
+        font-weight: 400;    
+    }
+}
+form {
+    margin: 0 0 30px 0;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    .set {
+        margin: 0 auto 10px auto;
+    }
+    .set input[type='text'],
+    .set input[type='url'],
+    .set input[type='email'] {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 5px 5px 7px 5px;
+        border: 0;
+        border-bottom: 1px solid #E0E0E0;
+        background-color: transparent;
+    }
+    .set input.highlighted {
+        border-bottom: 1px solid #3C80F6;
+    }
+    .status {
+        display: none;
+        float: right;
+        margin: 9px 15px 0 0;
+    }
+    input:focus {
+        outline: none;
+    }
+    input[type='button'],
+    input[type='submit'] {
+        font-size: 16px;
+        padding: 8px 20px;
+        cursor: pointer;
+        -webkit-transition: background-color .5s;
+        border: 1px solid RGBA(255, 255, 255, .3);
+        border: 1px solid #E0E0E0;
+        border-radius: 3px;
+        background-color: transparent;
+    }
+    input[type='button']:hover,
+    input[type='submit']:hover {
+        border: 1px solid #92BAFF;
+    }
+    input[type='button']:active,
+    input[type='submit']:active {
+        -webkit-transition: background-color 0s;
+        background-color: RGBA(255, 255, 255, .3);
+    }
+    input.submit {
+        float: right;
+    }
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    a {
+        text-decoration: none;
+        color: rgba(0,0,0,.54);
+    }
+    .item {
+        display: inline-block;
+        padding: 24px;
+        color: rgba(0,0,0,.54);
+    }
+}
