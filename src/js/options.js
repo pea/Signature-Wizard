@@ -56,13 +56,16 @@ var app = {
             e.preventDefault;           
             var sets = [];
             $('.set').each(function(i,v) {
-                if($(v).find('input[class="email"]').val() !== '' && $(v).find('input[class="url"]').val() !== ''){
+                if($(v).find('input[class="email"]').val() !== '' && 
+                    $(v).find('input[class="url"]').val() !== '' &&
+                    typeof($(v).find('input[class="email"]').val()) !== 'undefined' && 
+                    typeof($(v).find('input[class="url"]').val()) !== 'undefined'){
                     sets.push({
                         'email': $(v).find('input[class="email"]').val(),
                         'url': $(v).find('input[class="url"]').val()
                     }); 
                 }
-            });            
+            });         
             app.chrome.save({'data': sets});           
             $('.status').html('Saved').fadeIn(300).fadeOut(3000);
         });

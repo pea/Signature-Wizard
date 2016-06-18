@@ -6,7 +6,7 @@ body {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     margin: 0;
-    padding: 30px 10px 10px 10px;
+    padding: 30px 10px 70px 10px;
     color: #111111;
     background-color: rgba(245,245,245,.4);
 }
@@ -29,11 +29,11 @@ header {
     padding: 0 0 7px 0;
     letter-spacing: .03em;
     .title {
-        img {
+        img, svg {
             display: block;
             width: 200px;
             margin: 0 auto 30px auto;
-            left: 2px;
+            left: 5px;
             position: relative;
         }
         h1 {
@@ -116,7 +116,9 @@ form {
     }
 }
 .footer {
-    position: absolute;
+    position: fixed;
+    background-color: #fbfbfb;
+    width: 100%;
     bottom: 0;
     a {
         text-decoration: none;

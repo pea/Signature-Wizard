@@ -13,8 +13,8 @@
       "32": "images/icons/32.png",
       "48": "images/icons/48.png"
    },
-   "manifest_version": 3,
-   "name": "Gmail Signature From URL",
+   "manifest_version": 2,
+   "name": "Signature Wizard: Gmail Signatures From Urls",
    "options_page": "options.html",
    "permissions": [ "https://*/*", "storage" ],
    "version": "1.2"

@@ -34,7 +34,7 @@ gulp.task('htmlmin', function() {
 });
 
 gulp.task('copyimages', function() {
-    return gulp.src('src/images/**/*.{png,gif,jpeg,jpg}').
+    return gulp.src('src/images/**/*.{png,gif,jpeg,jpg,svg}').
     pipe(gulp.dest('dist/images'));
 });
 
@@ -49,7 +49,7 @@ gulp.task('copylocales', function() {
 });
 
 gulp.task('zip', function() {
-    return gulp.src('src/*').
+    return gulp.src('src/**/*.*').
     pipe(zip('dist.zip')).
     pipe(gulp.dest('dist'));
 });
