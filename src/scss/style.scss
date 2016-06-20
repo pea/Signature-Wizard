@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 30px 10px 70px 10px;
     color: #111111;
-    background-color: rgba(245,245,245,.4);
+    background-color: #FBFBFB;
 }
 a {
     font-weight: 400;
@@ -29,12 +29,13 @@ header {
     padding: 0 0 7px 0;
     letter-spacing: .03em;
     .title {
-        img, svg {
+        img,
+        svg {
+            position: relative;
+            left: 5px;
             display: block;
             width: 200px;
             margin: 0 auto 30px auto;
-            left: 5px;
-            position: relative;
         }
         h1 {
             font-size: 36px;
@@ -58,7 +59,7 @@ p {
     margin: 0 0 25px 0;
     text-align: center;
     a {
-        font-weight: 400;    
+        font-weight: 400;
     }
 }
 form {
@@ -96,30 +97,29 @@ form {
         font-size: 16px;
         padding: 8px 20px;
         cursor: pointer;
+        cursor: pointer;
         -webkit-transition: background-color .5s;
         border: 1px solid RGBA(255, 255, 255, .3);
         border: 1px solid #E0E0E0;
         border-radius: 3px;
         background-color: transparent;
+        &:hover {
+            border: 1px solid #92BAFF;
+        }
+        &:active {
+            -webkit-transition: background-color 0s;
+            background-color: RGBA(255, 255, 255, .3);
+        }
     }
-    input[type='button']:hover,
-    input[type='submit']:hover {
-        border: 1px solid #92BAFF;
-    }
-    input[type='button']:active,
-    input[type='submit']:active {
-        -webkit-transition: background-color 0s;
-        background-color: RGBA(255, 255, 255, .3);
-    }
-    input.submit {
+    input[type='submit'] {
         float: right;
     }
 }
 .footer {
     position: fixed;
-    background-color: #fbfbfb;
-    width: 100%;
     bottom: 0;
+    width: 100%;
+    background-color: #FBFBFB;
     a {
         text-decoration: none;
         color: rgba(0,0,0,.54);
