@@ -5,7 +5,8 @@ $(document).ready(function () {
     * If it has an ID (if it is a dialogue) initiate addSignture
     * If it has no ID (if it is a reply) create ID and initiate addSignature
     */  
-    $('body').on('click', '.inboxsdk__compose', function () {
+
+    $('body').on('click', 'div:contains("New Message")', function () {
         if($(this).attr('id') === undefined){
             $(this).attr('id', 'gm-signature1');   
         }
@@ -25,7 +26,7 @@ function addSignature(dialogue_id) {
         var data = obj.data;
         var messageBody = 'div[aria-label="Message Body"]';
         $(data).each(function (i, v) {
-            if (v.email == email) {
+            if (v.email === email || email === '') {
                 url = v.url;
             }
         });     
