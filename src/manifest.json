@@ -17,13 +17,13 @@
    "name": "Signature Wizard: Gmail Signatures From Urls",
    "options_page": "options.html",
    "permissions": [ "https://*/*", "storage" ],
-   "version": "1.2",
+   "version": "1.5",
    "browser_action": {
-       "default_icon": {                    // optional
-         "19": "images/icons/16.png",           // optional
-         "38": "images/icons/32.png"            // optional
+       "default_icon": {
+         "19": "images/icons/16.png",
+         "38": "images/icons/32.png"
        },
-       "default_title": "Signature Wizard",      // optional; shown in tooltip
-       "default_popup": "menu.html"        // optional
+       "default_title": "Signature Wizard",
+       "default_popup": "menu.html"
      }
 }

@@ -20,13 +20,21 @@ function addSignature(dialogue_id) {
     var string = $('#' + id + ' div[role="button"][tabindex="1"] span').text();
     var email = string.substring(string.lastIndexOf("<") + 1, string.lastIndexOf(">"));
 
+    if(email === '') {
+        string = $('title').text();
+        var regex = /\S+[a-z0-9]@[a-z0-9\.]+/img
+        var result = string.match(regex);
+        email = result[0];
+    }
+        console.log(email);
+
     // Get the signature URL which matches the selected email
     chrome.storage.sync.get(null, function (obj) {
         var url = null;
         var data = obj.data;
         var messageBody = 'div[aria-label="Message Body"]';
         $(data).each(function (i, v) {
-            if (v.email === email || email === '') {
+            if (v.email === email) {
                 url = v.url;
             }
         });     
