@@ -17,7 +17,7 @@
    "name": "Signature Wizard: Gmail Signatures From Urls",
    "options_page": "options.html",
    "permissions": [ "https://*/*", "storage" ],
-   "version": "1.5",
+   "version": "1.6",
    "browser_action": {
        "default_icon": {
          "19": "images/icons/16.png",
