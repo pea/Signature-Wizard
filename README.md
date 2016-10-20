@@ -1,3 +1,5 @@
+[Chrome Extension Download](https://chrome.google.com/webstore/detail/signature-wizard-gmail-si/ankhepfjfiifkmhjpgpoognambadnemi)
+
 # Prerequisites
 
 - Node
