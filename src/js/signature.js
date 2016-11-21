@@ -14,7 +14,9 @@ $(document).ready(function () {
         var id = $(this).attr('data-gm-signature-id');
 
         var string = $('*[data-gm-signature-id="' + id + '"] .a8i').text();
-        var email = string.replace('Replies will be sent from ', '');
+
+        var email = string.split(' ');
+        email = email[email.length-1]
 
         if(email === '') {
             string = $('title').text();
@@ -32,7 +34,7 @@ function addSignature(email, containerId) {
     chrome.storage.sync.get(null, function (obj) {
         var url = null;
         var data = obj.data;
-        var messageBody = 'div[aria-label="Message Body"]';
+        var messageBody = '.Am.Al.editable';
         $(data).each(function (i, v) {
             if (v.email === email) {
                 url = v.url;

@@ -1,21 +1,24 @@
 {
-    "name": "Gmail_Signature_From_Url",
-    "version": "1.0.0",
-    "scripts": {},
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pea/Gmail_Signature_From_Url.git"
-    },
-    "author": "Peter Bailey",
-    "license": "MIT",
-    "devDependencies": {
-        "gulp": "latest",
-        "run-sequence": "latest",
-        "gulp-watch": "latest",
-        "gulp-zip": "latest",
-        "gulp-sass": "latest",
-        "gulp-uglify": "latest",
-        "gulp-htmlmin": "latest"
-    },
-    "dependencies": {}
+  "name": "Gmail_Signature_From_Url",
+  "version": "1.8.5",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pea/Gmail_Signature_From_Url.git"
+  },
+  "author": "Peter Bailey",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "latest",
+    "gulp-bump": "^2.5.0",
+    "gulp-htmlmin": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "gulp-zip": "latest",
+    "run-sequence": "latest",
+    "yargs": "^6.3.0"
+  },
+  "dependencies": {}
 }
