@@ -35,8 +35,10 @@ function addSignature(email, containerId) {
         var url = null;
         var data = obj.data;
         var messageBody = '.Am.Al.editable';
+        console.log('Fetching signature for ' + email)
         $(data).each(function (i, v) {
-            if (v.email === email) {
+            if (email.match(v.email) != null) {
+                console.log('Found signature at email ' + v.email)
                 url = v.url;
             }
         });
