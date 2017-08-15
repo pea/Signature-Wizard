@@ -1,5 +1,5 @@
 {
-   "version": "1.8.6",
+   "version": "1.8.8",
    "content_scripts": [ {
       "js": [ "js/jquery.js", "js/signature.js" ],
       "css": [ "css/signature-styles.css" ],

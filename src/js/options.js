@@ -64,8 +64,7 @@ var app = {
                     sets.push({
                         'email': $(v).find('.email').val(),
                         'url': $(v).find('.url').val()
-                    }); 
-                    console.log(sets);
+                    }); console.log(sets);
                 }
             });      
             app.chrome.save({'data': sets});           
